@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(135deg, #8a2be2, #ff69b4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .test-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .animated-title {
+    font-size: 2.5rem;
+    color: #8a2be2;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  #timer {
+    font-size: 1.2rem;
+    color: #8a2be2;
+    margin-bottom: 10px;
+  }
+  
+  #options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #6a1b9a;
+    transform: translateY(-2px);
+  }
+  
+  #result-section {
+    display: none;
+  }

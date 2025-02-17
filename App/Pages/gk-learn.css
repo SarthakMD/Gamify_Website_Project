@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A); /* Green gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .learn-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animated Title */
+  .animated-title {
+    font-size: 2.5rem;
+    color: #4CAF50; /* Green color for the title */
+    animation: bounce 2s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4CAF50; /* Green color for buttons */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .sidebar button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Content */
+  .content {
+    margin-left: 220px;
+  }
+  
+  /* Navigation Buttons */
+  .navigation {
+    margin-bottom: 20px;
+  }
+  
+  .navigation button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color for buttons */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .navigation button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Topics */
+  .topic {
+    display: none;
+  }
+  
+  .topic .step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .topic h2 {
+    color: #4CAF50; /* Green color for headings */
+  }
+  
+  .topic p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .topic strong {
+    color: #4CAF50; /* Green color for keywords */
+  }
+  
+  .topic em {
+    font-style: italic;
+    color: #388E3C; /* Darker green for examples */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

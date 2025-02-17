@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivaji Maharaj Quiz</title>
+    <link rel="stylesheet" href="hist-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1 class="animated-title">Shivaji Maharaj Quiz!</h1>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <div id="question-container">
+        <p id="question"></p>
+        <div id="options"></div>
+      </div>
+      <p id="score">Score: 0</p>
+      <button id="next-btn">Next Question</button>
+    </div>
+    <div id="candy-rain"></div>
+    <div id="wrong-answer-rain"></div>
+    <!-- New container for "Wrong Answer" rain -->
+
+    <!-- Sound Effects -->
+    <audio id="clapping-sound" src="clapping.mp3"></audio>
+    <audio id="oh-no-sound" src="oh-no.mp3"></audio>
+
+    <script src="hist-script.js"></script>
+  </body>
+</html>

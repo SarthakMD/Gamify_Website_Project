@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn About Shivaji Maharaj</title>
+    <link rel="stylesheet" href="I-his.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="learn-container">
+      <h1 class="animated-title">Learn About Shivaji Maharaj</h1>
+      <div class="sidebar">
+        <button onclick="showTopic('early-life')">Early Life</button>
+        <button onclick="showTopic('military-campaigns')">
+          Military Campaigns
+        </button>
+        <button onclick="showTopic('administration')">Administration</button>
+        <button onclick="showTopic('legacy')">Legacy</button>
+      </div>
+      <div class="content">
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+          <button id="prev-btn" onclick="prevStep()" style="display: none">
+            ← Previous
+          </button>
+          <button id="next-btn" onclick="nextStep()">Next →</button>
+        </div>
+
+        <!-- Early Life -->
+        <div id="early-life" class="topic">
+          <div class="step" data-step="1">
+            <h2>Step 1: Birth and Childhood</h2>
+            <p>
+              <strong>Shivaji Maharaj</strong> was born on
+              <em>February 19, 1630</em>, at the
+              <strong>Shivneri Fort</strong> near Pune. His mother,
+              <strong>Jijabai</strong>, and his guardian,
+              <strong>Dadoji Kondadev</strong>, played a significant role in
+              shaping his character.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Early Influences</h2>
+            <p>
+              Shivaji was inspired by the stories of the
+              <strong>Ramayana</strong> and <strong>Mahabharata</strong> and the
+              teachings of his mother. He developed a strong sense of
+              <strong>justice</strong> and <strong>independence</strong> from a
+              young age.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: First Military Achievement</h2>
+            <p>
+              At the age of <strong>16</strong>, Shivaji captured the
+              <strong>Torna Fort</strong> in 1645, marking the beginning of his
+              military career and his vision of
+              <strong>Swarajya</strong> (self-rule).
+            </p>
+          </div>
+        </div>
+
+        <!-- Military Campaigns -->
+        <div id="military-campaigns" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Battle of Pratapgad (1659)</h2>
+            <p>
+              Shivaji defeated the <strong>Afzal Khan</strong>, a general of the
+              Bijapur Sultanate, in the <strong>Battle of Pratapgad</strong>.
+              This victory established him as a formidable warrior.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Battle of Pavan Khind (1660)</h2>
+            <p>
+              Shivaji's general, <strong>Baji Prabhu Deshpande</strong>, held
+              off the enemy at <strong>Pavan Khind</strong> to ensure Shivaji's
+              safe escape. This battle is a testament to the bravery of the
+              Marathas.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Attack on Shaista Khan (1663)</h2>
+            <p>
+              Shivaji launched a daring night attack on
+              <strong>Shaista Khan</strong>, the Mughal governor, in Pune. This
+              bold move weakened Mughal influence in the Deccan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Administration -->
+        <div id="administration" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Ashta Pradhan Mandal</h2>
+            <p>
+              Shivaji established the <strong>Ashta Pradhan Mandal</strong>, a
+              council of eight ministers, to assist in governance. This included
+              roles like the <strong>Peshwa</strong> and
+              <strong>Senapati</strong>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Naval Power</h2>
+            <p>
+              Shivaji recognized the importance of a strong navy and built
+              <strong>forts</strong> along the Konkan coast. He is often called
+              the <strong>Father of the Indian Navy</strong>.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Revenue System</h2>
+            <p>
+              Shivaji implemented a fair and efficient
+              <strong>revenue system</strong>, replacing the exploitative
+              practices of the previous rulers. He promoted
+              <strong>agriculture</strong> and <strong>trade</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Legacy -->
+        <div id="legacy" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Coronation (1674)</h2>
+            <p>
+              Shivaji was crowned as <strong>Chhatrapati</strong> in 1674 at the
+              <strong>Raigad Fort</strong>. This marked the formal establishment
+              of the <strong>Maratha Empire</strong>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Vision of Swarajya</h2>
+            <p>
+              Shivaji's vision of <strong>Swarajya</strong> (self-rule) inspired
+              generations. He fought for the rights of the common people and
+              against foreign domination.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Enduring Legacy</h2>
+            <p>
+              Shivaji Maharaj is remembered as a
+              <strong>visionary leader</strong>, a
+              <strong>skilled warrior</strong>, and a
+              <strong>just ruler</strong>. His legacy continues to inspire pride
+              and patriotism in India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentTopic = null;
+      let currentStep = 1;
+
+      // Show the selected topic
+      function showTopic(topicId) {
+        // Hide all topics
+        const topics = document.querySelectorAll(".topic");
+        topics.forEach((topic) => {
+          topic.style.display = "none";
+        });
+
+        // Show the selected topic
+        const selectedTopic = document.getElementById(topicId);
+        selectedTopic.style.display = "block";
+
+        // Reset step to 1
+        currentStep = 1;
+        showStep(currentStep);
+
+        // Update the current topic
+        currentTopic = topicId;
+
+        // Show the navigation buttons
+        document.getElementById("prev-btn").style.display = "none";
+        document.getElementById("next-btn").style.display = "block";
+      }
+
+      // Show the current step
+      function showStep(step) {
+        const steps = document.querySelectorAll(`#${currentTopic} .step`);
+        steps.forEach((stepElement) => {
+          if (stepElement.getAttribute("data-step") == step) {
+            stepElement.style.display = "block";
+          } else {
+            stepElement.style.display = "none";
+          }
+        });
+
+        // Update navigation buttons
+        if (step === 1) {
+          document.getElementById("prev-btn").style.display = "none";
+        } else {
+          document.getElementById("prev-btn").style.display = "block";
+        }
+
+        if (step === steps.length) {
+          document.getElementById("next-btn").style.display = "none";
+        } else {
+          document.getElementById("next-btn").style.display = "block";
+        }
+      }
+
+      // Go to the next step
+      function nextStep() {
+        if (
+          currentStep <
+          document.querySelectorAll(`#${currentTopic} .step`).length
+        ) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      // Go to the previous step
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+    </script>
+  </body>
+</html>

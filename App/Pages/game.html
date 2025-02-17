@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 id="questionText">What is 2 + 2?</h1>
+
+        <div class="options">
+            <button class="option" onclick="checkAnswer('4')">4</button>
+            <button class="option" onclick="checkAnswer('5')">5</button>
+            <button class="option" onclick="checkAnswer('3')">3</button>
+        </div>
+
+        <div id="feedbackText" class="feedback"></div>
+
+        <button id="rewardButton" class="reward-btn" style="display:none;" onclick="giveReward()">Get Reward!</button>
+        
+        <img id="characterImage" src="character.png" alt="Character" class="character" style="display:none;" />
+    </div>
+
+    <!-- Chocolate Rain -->
+    <div id="chocolateRain" class="chocolate-rain"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

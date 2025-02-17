@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn General Knowledge</title>
+    <link rel="stylesheet" href="gk-learn.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="learn-container">
+      <h1 class="animated-title">Learn General Knowledge</h1>
+      <div class="sidebar">
+        <button onclick="showTopic('basic-gk')">Basic GK</button>
+        <button onclick="showTopic('world-history')">World History</button>
+        <button onclick="showTopic('geography')">Geography</button>
+        <button onclick="showTopic('science')">Science</button>
+      </div>
+      <div class="content">
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+          <button id="prev-btn" onclick="prevStep()" style="display: none">
+            ← Previous
+          </button>
+          <button id="next-btn" onclick="nextStep()">Next →</button>
+        </div>
+
+        <!-- Basic GK -->
+        <div id="basic-gk" class="topic">
+          <div class="step" data-step="1">
+            <h2>Step 1: What is the capital of France?</h2>
+            <p>The capital of France is <strong>Paris</strong>.</p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Who wrote "Romeo and Juliet"?</h2>
+            <p>
+              <strong>William Shakespeare</strong> wrote "Romeo and Juliet".
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: What is the largest planet in our solar system?</h2>
+            <p>The largest planet is <strong>Jupiter</strong>.</p>
+          </div>
+        </div>
+
+        <!-- World History -->
+        <div id="world-history" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: When did World War II end?</h2>
+            <p>World War II ended in <strong>1945</strong>.</p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Who was the first President of the United States?</h2>
+            <p>The first President was <strong>George Washington</strong>.</p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: What was the Berlin Wall?</h2>
+            <p>
+              The Berlin Wall was a barrier that divided
+              <strong>East and West Germany</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Geography -->
+        <div id="geography" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: What is the longest river in the world?</h2>
+            <p>The longest river is the <strong>Nile</strong>.</p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Which is the largest desert in the world?</h2>
+            <p>The largest desert is the <strong>Sahara</strong>.</p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: What is the smallest country in the world?</h2>
+            <p>The smallest country is <strong>Vatican City</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Science -->
+        <div id="science" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: What is the chemical symbol for water?</h2>
+            <p>
+              The chemical symbol for water is <strong>H<sub>2</sub>O</strong>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Who discovered gravity?</h2>
+            <p><strong>Isaac Newton</strong> discovered gravity.</p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: What is the speed of light?</h2>
+            <p>
+              The speed of light is approximately
+              <strong>299,792 kilometers per second</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentTopic = null;
+      let currentStep = 1;
+
+      // Show the selected topic
+      function showTopic(topicId) {
+        // Hide all topics
+        const topics = document.querySelectorAll(".topic");
+        topics.forEach((topic) => {
+          topic.style.display = "none";
+        });
+
+        // Show the selected topic
+        const selectedTopic = document.getElementById(topicId);
+        selectedTopic.style.display = "block";
+
+        // Reset step to 1
+        currentStep = 1;
+        showStep(currentStep);
+
+        // Update the current topic
+        currentTopic = topicId;
+
+        // Show the navigation buttons
+        document.getElementById("prev-btn").style.display = "none";
+        document.getElementById("next-btn").style.display = "block";
+      }
+
+      // Show the current step
+      function showStep(step) {
+        const steps = document.querySelectorAll(`#${currentTopic} .step`);
+        steps.forEach((stepElement) => {
+          if (stepElement.getAttribute("data-step") == step) {
+            stepElement.style.display = "block";
+          } else {
+            stepElement.style.display = "none";
+          }
+        });
+
+        // Update navigation buttons
+        if (step === 1) {
+          document.getElementById("prev-btn").style.display = "none";
+        } else {
+          document.getElementById("prev-btn").style.display = "block";
+        }
+
+        if (step === steps.length) {
+          document.getElementById("next-btn").style.display = "none";
+        } else {
+          document.getElementById("next-btn").style.display = "block";
+        }
+      }
+
+      // Go to the next step
+      function nextStep() {
+        if (
+          currentStep <
+          document.querySelectorAll(`#${currentTopic} .step`).length
+        ) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      // Go to the previous step
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+    </script>
+  </body>
+</html>

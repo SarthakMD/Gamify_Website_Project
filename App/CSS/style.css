@@ -1,0 +1,216 @@
+/* General Styles */
+* {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #fdf2e9, white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  padding: 15px 5%;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-size: 1.2rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: black;
+}
+
+#navlink,
+#brand {
+  color: #964b00;
+}
+
+/* Main Container */
+.container-fluid {
+  padding: 3% 5%;
+  background-color: #fdf2e9;
+}
+
+/* Title Section */
+.big-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Intro Text */
+#short-intro {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+/* Images */
+.student-pic {
+  width: 50%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.engineering-team-pic {
+  width: 15%;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Start Button */
+.start-button {
+  margin: 20px 0;
+  background-color: #00bfa6;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.start-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.start-button:hover {
+  background-color: #008f7a;
+}
+
+/* Courses Section */
+.ongoing-course {
+  margin-top: 2rem;
+}
+
+.ongoing-course .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Course List */
+.html-course .list-group-item {
+  padding: 1.5rem;
+  background-color: #a0f3e8;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: -5px 15px 30px rgba(29, 61, 57, 0.3);
+}
+
+.html-course .list-group-item a {
+  color: black;
+}
+
+/* Footer */
+#footer {
+  padding: 5% 1%;
+  background-color: #00bfa6;
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .big-heading {
+    font-size: 2.5rem;
+  }
+
+  .student-pic {
+    width: 70%;
+  }
+
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  .big-heading {
+    font-size: 2rem;
+  }
+
+  .student-pic {
+    width: 80%;
+  }
+
+  .course-card {
+    width: 95%;
+  }
+}

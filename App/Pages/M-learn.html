@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Maths</title>
+    <link rel="stylesheet" href="M-learn.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="learn-container">
+      <h1 class="animated-title">Learn Maths</h1>
+      <div class="sidebar">
+        <button onclick="showTopic('arithmetic')">Arithmetic</button>
+        <button onclick="showTopic('algebra')">Algebra</button>
+        <button onclick="showTopic('geometry')">Geometry</button>
+        <button onclick="showTopic('calculus')">Calculus</button>
+      </div>
+      <div class="content">
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+          <button id="prev-btn" onclick="prevStep()" style="display: none">
+            ← Previous
+          </button>
+          <button id="next-btn" onclick="nextStep()">Next →</button>
+        </div>
+
+        <!-- Arithmetic -->
+        <div id="arithmetic" class="topic">
+          <div class="step" data-step="1">
+            <h2>Step 1: Order of Operations (PEMDAS)</h2>
+            <p>
+              <strong>PEMDAS</strong> stands for Parentheses, Exponents,
+              Multiplication/Division, Addition/Subtraction. Example: Solve
+              <em>3 + 6 × (5 − 2)</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong> First, solve inside the parentheses:
+              <em>5 − 2 = 3</em>. Then, multiply: <em>6 × 3 = 18</em>. Finally,
+              add: <em>3 + 18 = 21</em>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Fractions and Decimals</h2>
+            <p>
+              <strong>Fractions</strong> represent parts of a whole. Example:
+              <em>1/2 + 1/4 = 3/4</em>.
+            </p>
+            <p>
+              <strong>Decimals</strong> are another way to represent fractions.
+              Example: <em>0.5 + 0.25 = 0.75</em>.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Percentages</h2>
+            <p>
+              <strong>Percentages</strong> are fractions out of 100. Example:
+              <em>25% of 80 = 20</em>.
+            </p>
+            <p>
+              <strong>Formula:</strong>
+              <em>Percentage = (Part / Whole) × 100</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Algebra -->
+        <div id="algebra" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Solving Linear Equations</h2>
+            <p>
+              <strong>Linear equations</strong> are equations of the form
+              <em>ax + b = c</em>. Example: Solve <em>2x + 3 = 7</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong> Subtract 3: <em>2x = 4</em>. Divide by
+              2: <em>x = 2</em>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Quadratic Equations</h2>
+            <p>
+              <strong>Quadratic equations</strong> are of the form
+              <em>ax² + bx + c = 0</em>. Example: Solve
+              <em>x² − 5x + 6 = 0</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong> Factorize: <em>(x − 2)(x − 3) = 0</em>.
+              Solutions: <em>x = 2, x = 3</em>.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Systems of Equations</h2>
+            <p>
+              <strong>Systems of equations</strong> involve solving multiple
+              equations simultaneously. Example: Solve <em>2x + y = 5</em> and
+              <em>x − y = 1</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong> Add the equations:
+              <em>3x = 6 → x = 2</em>. Substitute: <em>y = 1</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Geometry -->
+        <div id="geometry" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Pythagorean Theorem</h2>
+            <p>
+              <strong>Pythagorean theorem</strong> states that in a right
+              triangle, <em>a² + b² = c²</em>. Example: Find the hypotenuse if
+              <em>a = 3</em> and <em>b = 4</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong>
+              <em>c² = 3² + 4² = 9 + 16 = 25 → c = 5</em>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Area of a Circle</h2>
+            <p>
+              <strong>Area of a circle</strong> is given by <em>A = πr²</em>.
+              Example: Find the area if <em>r = 7</em>.
+            </p>
+            <p><strong>Solution:</strong> <em>A = π × 7² = 49π</em>.</p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Volume of a Sphere</h2>
+            <p>
+              <strong>Volume of a sphere</strong> is given by
+              <em>V = (4/3)πr³</em>. Example: Find the volume if <em>r = 3</em>.
+            </p>
+            <p><strong>Solution:</strong> <em>V = (4/3)π × 3³ = 36π</em>.</p>
+          </div>
+        </div>
+
+        <!-- Calculus -->
+        <div id="calculus" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Derivatives</h2>
+            <p>
+              <strong>Derivatives</strong> measure the rate of change. Example:
+              Find the derivative of <em>f(x) = x²</em>.
+            </p>
+            <p><strong>Solution:</strong> <em>f'(x) = 2x</em>.</p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Integrals</h2>
+            <p>
+              <strong>Integrals</strong> calculate the area under a curve.
+              Example: Find the integral of <em>f(x) = 2x</em>.
+            </p>
+            <p><strong>Solution:</strong> <em>∫2x dx = x² + C</em>.</p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Limits</h2>
+            <p>
+              <strong>Limits</strong> describe the behavior of a function as it
+              approaches a value. Example: Find
+              <em>lim(x→2) (x² − 4)/(x − 2)</em>.
+            </p>
+            <p>
+              <strong>Solution:</strong> Simplify:
+              <em>(x + 2)(x − 2)/(x − 2) = x + 2</em>. So,
+              <em>lim(x→2) x + 2 = 4</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentTopic = null;
+      let currentStep = 1;
+
+      // Show the selected topic
+      function showTopic(topicId) {
+        // Hide all topics
+        const topics = document.querySelectorAll(".topic");
+        topics.forEach((topic) => {
+          topic.style.display = "none";
+        });
+
+        // Show the selected topic
+        const selectedTopic = document.getElementById(topicId);
+        selectedTopic.style.display = "block";
+
+        // Reset step to 1
+        currentStep = 1;
+        showStep(currentStep);
+
+        // Update the current topic
+        currentTopic = topicId;
+
+        // Show the navigation buttons
+        document.getElementById("prev-btn").style.display = "none";
+        document.getElementById("next-btn").style.display = "block";
+      }
+
+      // Show the current step
+      function showStep(step) {
+        const steps = document.querySelectorAll(`#${currentTopic} .step`);
+        steps.forEach((stepElement) => {
+          if (stepElement.getAttribute("data-step") == step) {
+            stepElement.style.display = "block";
+          } else {
+            stepElement.style.display = "none";
+          }
+        });
+
+        // Update navigation buttons
+        if (step === 1) {
+          document.getElementById("prev-btn").style.display = "none";
+        } else {
+          document.getElementById("prev-btn").style.display = "block";
+        }
+
+        if (step === steps.length) {
+          document.getElementById("next-btn").style.display = "none";
+        } else {
+          document.getElementById("next-btn").style.display = "block";
+        }
+      }
+
+      // Go to the next step
+      function nextStep() {
+        if (
+          currentStep <
+          document.querySelectorAll(`#${currentTopic} .step`).length
+        ) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      // Go to the previous step
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(135deg, #a6c0fe, #f68084); /* Blue gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .quiz-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animated Title */
+  .animated-title {
+    font-size: 2.5rem;
+    color: #1e90ff; /* Blue color for the title */
+    animation: bounce 2s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Progress Bar */
+  #progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  
+  #progress {
+    height: 100%;
+    width: 0;
+    background-color: #1e90ff; /* Blue color for progress bar */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Question and Options */
+  #question {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-btn {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #1e90ff; /* Blue color for buttons */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option-btn:hover {
+    background-color: #0077cc; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .option-btn.correct {
+    background-color: #4caf50; /* Green for correct answer */
+  }
+  
+  .option-btn.incorrect {
+    background-color: #f44336; /* Red for incorrect answer */
+  }
+  
+  /* Score */
+  #score {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Next Button */
+  #next-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #1e90ff; /* Blue color for next button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #next-btn:hover {
+    background-color: #0077cc; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Candy Rain Effect */
+  #candy-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .candy {
+    position: absolute;
+    font-size: 2rem;
+    animation: fall linear infinite;
+    color: #1e90ff; /* Blue color for candies */
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+  /* Wrong Answer Rain Effect */
+  #wrong-answer-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .wrong-answer {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ff0000; /* Bright red color for wrong answers */
+    animation: fall linear infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+  }
+  
+  /* Wrong Answer Animation */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+  }
+  
+  .shake {
+    animation: shake 0.5s;
+  }

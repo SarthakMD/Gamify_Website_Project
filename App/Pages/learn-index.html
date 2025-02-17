@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn English Grammar</title>
+    <link rel="stylesheet" href="learn-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="learn-container">
+      <h1 class="animated-title">Learn English Grammar</h1>
+      <div class="sidebar">
+        <button onclick="showTopic('parts-of-speech')">Parts of Speech</button>
+        <button onclick="showTopic('tenses')">Tenses</button>
+        <button onclick="showTopic('sentence-structure')">
+          Sentence Structure
+        </button>
+        <button onclick="showTopic('common-rules')">Common Rules</button>
+      </div>
+      <div class="content">
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+          <button id="prev-btn" onclick="prevStep()" style="display: none">
+            ← Previous
+          </button>
+          <button id="next-btn" onclick="nextStep()">Next →</button>
+        </div>
+
+        <!-- Parts of Speech -->
+        <div id="parts-of-speech" class="topic">
+          <div class="step" data-step="1">
+            <h2>Step 1: What is a Noun?</h2>
+            <p>
+              A <strong>noun</strong> is a word that names a person, place,
+              thing, or idea. Example: <em>dog, city, happiness</em>.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: What is a Verb?</h2>
+            <p>
+              A <strong>verb</strong> is a word that describes an action or
+              state. Example: <em>run, is, think</em>.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: What is an Adjective?</h2>
+            <p>
+              An <strong>adjective</strong> is a word that describes a noun.
+              Example: <em>happy, tall, blue</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tenses -->
+        <div id="tenses" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Present Tense</h2>
+            <p>
+              The <strong>present tense</strong> describes actions happening
+              now. Example: <em>I eat pizza.</em>
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Past Tense</h2>
+            <p>
+              The <strong>past tense</strong> describes actions that happened in
+              the past. Example: <em>I ate pizza.</em>
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Future Tense</h2>
+            <p>
+              The <strong>future tense</strong> describes actions that will
+              happen. Example: <em>I will eat pizza.</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- Sentence Structure -->
+        <div id="sentence-structure" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Subject</h2>
+            <p>
+              The <strong>subject</strong> is the person or thing doing the
+              action. Example: <em>The cat</em> sleeps.
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Verb</h2>
+            <p>
+              The <strong>verb</strong> is the action or state. Example: The cat
+              <em>sleeps</em>.
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Object</h2>
+            <p>
+              The <strong>object</strong> is the person or thing receiving the
+              action. Example: The cat eats <em>fish</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common Rules -->
+        <div id="common-rules" class="topic" style="display: none">
+          <div class="step" data-step="1">
+            <h2>Step 1: Subject-Verb Agreement</h2>
+            <p>
+              The subject and verb must agree in number. Example:
+              <em>He runs</em> (not "He run").
+            </p>
+          </div>
+          <div class="step" data-step="2" style="display: none">
+            <h2>Step 2: Punctuation</h2>
+            <p>
+              Use periods, commas, and question marks correctly. Example:
+              <em>What is your name?</em>
+            </p>
+          </div>
+          <div class="step" data-step="3" style="display: none">
+            <h2>Step 3: Capitalization</h2>
+            <p>
+              Capitalize the first word of a sentence and proper nouns. Example:
+              <em>John lives in New York.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentTopic = null;
+      let currentStep = 1;
+
+      // Show the selected topic
+      function showTopic(topicId) {
+        // Hide all topics
+        const topics = document.querySelectorAll(".topic");
+        topics.forEach((topic) => {
+          topic.style.display = "none";
+        });
+
+        // Show the selected topic
+        const selectedTopic = document.getElementById(topicId);
+        selectedTopic.style.display = "block";
+
+        // Reset step to 1
+        currentStep = 1;
+        showStep(currentStep);
+
+        // Update the current topic
+        currentTopic = topicId;
+
+        // Show the navigation buttons
+        document.getElementById("prev-btn").style.display = "none";
+        document.getElementById("next-btn").style.display = "block";
+      }
+
+      // Show the current step
+      function showStep(step) {
+        const steps = document.querySelectorAll(`#${currentTopic} .step`);
+        steps.forEach((stepElement) => {
+          if (stepElement.getAttribute("data-step") == step) {
+            stepElement.style.display = "block";
+          } else {
+            stepElement.style.display = "none";
+          }
+        });
+
+        // Update navigation buttons
+        if (step === 1) {
+          document.getElementById("prev-btn").style.display = "none";
+        } else {
+          document.getElementById("prev-btn").style.display = "block";
+        }
+
+        if (step === steps.length) {
+          document.getElementById("next-btn").style.display = "none";
+        } else {
+          document.getElementById("next-btn").style.display = "block";
+        }
+      }
+
+      // Go to the next step
+      function nextStep() {
+        if (
+          currentStep <
+          document.querySelectorAll(`#${currentTopic} .step`).length
+        ) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      // Go to the previous step
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+    </script>
+  </body>
+</html>
